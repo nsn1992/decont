@@ -3,7 +3,7 @@
 genomefile="$1"
 outdir="$2"
 if [ -e "$outdir"/Log.out ]; then
-	echo "An index already exists. The script will continue using it"
+	echo "An index already exists.Skipping operation"
 else
 	STAR --runThreadN 4 --runMode genomeGenerate --genomeDir "$outdir" --genomeFastaFiles "$genomefile" --genomeSAindexNbases 9
 fi
