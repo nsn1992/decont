@@ -5,11 +5,11 @@
 input_dir="$1"
 out_dir="$2"
 sample_id="$3"
-mkdir -p "$out_dir"
 out_file="$out_dir/${sample_id}.fastq.gz"
 if [ -e "${out_file}" ]; then
-	echo "The merged output file for ${sample_id} already exists. The script will continue using it"
+	echo "The merged output file for ${sample_id} already exists. Skipping operation"
 else
+	mkdir -p "$out_dir"
 	find "$input_dir" -name "${sample_id}*.fastq.gz" -exec cat {} + > "$out_file"
 fi
 
