@@ -1,0 +1,12 @@
+name: envdecont
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - fastqc
+  - cutadapt
+  - ca-certificates
+  - openssl
+  - star
+  - seqkit
+prefix: /home/vant/miniforge3/envs/envdecont
